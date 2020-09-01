@@ -19,6 +19,7 @@ searchUser.addEventListener('keyup', e => {
     // Make HTTP Call
     github.getUser(inputText)
       .then(data => {
+        console.log(data.repos)
         if(data.profile.message === 'Not Found') {
           // Show Alert
           ui.showAlert('User not found!', 'alert alert-danger')
